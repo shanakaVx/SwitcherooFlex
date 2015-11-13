@@ -1,14 +1,288 @@
+﻿/* global styles */
 
-body{width:650px; font-family: sans-serif;}
-a, span {padding: 5px;}
-ul { list-style-type: none; padding: 0; margin: 0 0 5px 0;}
-#new-rule input[type=text], .edit-rule input[type=text]{width:220px; margin: 0 5px;}
-.from, .to { font-family: monospace; width: 223px; display: inline-block; }
-.seperator { font-weight: bold; color: red; }
-#headings span { font-family: Arial; font-weight: bold; color: #def; padding: 5px 10px;}
-#no-rules { padding: 10px; color: #666; }
-.switcheroo {color: red;}
-#removeAllRulesButton { margin: 10px; }
-#new-rule, .edit-rule { margin-left: 3px; }
-.edit-rule .seperator {padding-right: 18px;}
-#headings { background-color: #69F; border-radius: 5px 5px 0 0; }
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	width: 650px;
+	margin: 0;
+	padding: 0;
+	background-color: #D0E0FF;
+}
+
+body.options {
+	width: inherit;
+	font-size: 1rem;
+}
+
+a, span {
+	padding: 5px;
+}
+
+ul {
+	list-style-type: none; 
+	padding: 0; 
+	margin: 0 0 5px 0;
+}
+
+a, span, button, input, img {
+	vertical-align: middle;
+}
+
+.imgIcon {
+	width: 16px;
+	height: 16px;
+}
+
+.options .imgIcon {
+	width: 24px;
+	height: 24px;
+}
+
+/* header */
+
+#header {
+	display: none;
+}
+
+a {
+	color: #ffffff;
+}
+
+.options #header {
+	display: block;
+}
+
+.options #header #product {
+	text-align: center;
+	font-size: 2rem;
+	background: linear-gradient(to bottom, #D0E0FF, #00a0ff);
+	text-shadow: #a0a0a0 3px 3px 3px;
+	color: #ffffff;
+	}
+	
+.options #header #credits {
+	background-color: #00a0ff;
+	color: #ffffff;
+	padding: 0.6rem;
+}
+.options #header #cswitcheroo {
+	margin-top: 0.6rem;
+}
+
+#headings {
+	background-color: #00a0ff;
+	border-bottom: 1px black solid;
+	font-size: 10px;
+}
+
+.options #headings {
+	font-size: 1rem;
+}
+
+#headings span { 
+	font-weight: bold;
+	font-size: larger;
+	color: #def; 
+	padding: 5px 10px;
+}
+#headings span.to {
+	padding-left: 0;
+}
+
+/* rule entries */
+
+.from, .to { 
+	font-family: monospace;
+	width: 250px; 
+	display: inline-block;
+	padding-left: 10px;
+}
+.options .from, 
+.options .to {
+	width: 30%;
+}
+
+.seperator { 
+	font-weight: bold; 
+	color: red;
+	font-size: 18px;
+}
+
+input.active,
+input#isRegex {
+	display: none; /* we have the image for that. */
+}
+
+#rules li:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+#rules li {
+	height: 22px;
+}
+.options #rules li {
+	height: 30px;
+	padding-top: 3px;
+}
+
+/* place holder for no rules */
+
+#no-rules { 
+	padding: 10px;
+    color: #333333;
+    border: 1px #808000 solid;
+    margin: 10px;
+    background-color: #FFFFC0;
+	box-shadow: #808080 5px 5px 5px;
+    border-radius: 5px;
+}
+
+/* switcheroo ad */
+
+.switcheroo {
+	color: red;
+}
+
+/* new rule */
+
+#new-rule {
+    border: 1px #008000 solid;
+    margin: 10px;
+    background-color: #c0ffc0;
+    padding: 5px;
+    box-shadow: #808080 5px 5px 5px;
+    border-radius: 5px;
+}
+
+#newRuleCaption {
+	font-size: 10px;
+	margin: 0 0 5px 5px;
+}
+
+.options #newRuleCaption {
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+#new-rule, 
+.edit-rule { 
+	margin-left: 3px;
+}
+
+#new-rule input[type=text], 
+.edit-rule input[type=text] {
+	width: 250px; 
+	margin: 0 5px;
+	font-weight: bold;
+}
+
+.options #new-rule input[type=text], 
+.options .edit-rule input[type=text] {
+	width: 30%; 
+	font-size: 1rem;
+}
+
+.helpSection {
+	display: none;
+}
+
+.options .helpSection {
+	display: block;
+	margin: 0.5rem 0.3rem;
+	font-size: 0.8rem;
+}
+.helpSection .caption {
+	font-weight: bold;
+	margin-top: 0.5rem
+}
+
+/* edit rule */
+
+.edit-rule .seperator {
+	padding-right: 18px;
+}
+
+input.isreg {
+	display: none;
+}
+
+.edit-rule input {
+	font-family: monospace;
+	font-size: 10px;
+}
+
+.edit-rule input.toInput {
+	height: 14px;
+	margin: 1px 8px 1px -5px;
+}
+
+.options #new-rule {
+	margin: 0.7rem;
+}
+
+/* buttons in footer */
+
+.toolbar {
+	border: 1px black solid;
+	background-color: #d0d0d0;
+    box-shadow: #808080 5px 5px 5px;
+    border-radius: 5px;
+    padding: 5px;
+	margin: 10px;
+	font-size: 10px;
+}
+.options .toolbar {
+	font-size: 0.8rem;
+	margin: 0.7rem;
+}
+
+.toolbar .caption {
+	font-weight: bold;
+}
+
+.toolbar #toolbuttons {
+	display: none;
+}
+
+.options  .toolbar #toolbuttons {
+	display: block;
+}
+
+.options #toolsOptionsOnly {
+	display: none;
+}
+
+#toolbuttons .toolbutton { 
+	margin: 0.5rem 0;
+}
+
+/* export and import */
+#import,
+#export {
+	display: none;
+	border: 1px #000080 solid;
+	margin: 10px;
+	background-color: #c0e0ff;
+	padding: 5px;
+	box-shadow: #8080ff 5px 5px 5px;
+	border-radius: 5px;
+	font-size: 0.8rem;
+}
+#import textarea,
+#export textarea {
+	width: 80%;
+	height: 10rem;
+	margin: 1rem;
+	font-family: monospace;
+}
+#import .caption,
+#export .caption {
+	font-weight: bold;
+	margin: 0.5rem 1rem 0;
+}
+#explainExport, 
+#explainImport {
+	margin: -0.5rem 1rem 0.5rem 1rem;
+}
+#importButton {
+	margin-left: 1rem;
+}

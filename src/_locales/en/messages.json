@@ -1,0 +1,133 @@
+﻿{
+	"appName": {
+		"message": "Switcheroo Redirector Plus"
+	},
+	"appDesc": {
+		"message": "Setup custom redirect rules for any http request i.e pages, scripts, images etc."
+	},
+	"appIconTitle": {
+		"message": "edit Switcheroo Plus rules",
+		"description" : "tooltip text for switcheroo icon"
+	},
+	"cswitcheroo" : {
+		"message" : "This extension is an re-worked version of Switcheroo and derived from: <a href='https://github.com/ranjez/Switcheroo'>https://github.com/ranjez/Switcheroo</a>",
+		"description" : "information about the original switcheroo"
+	},
+	"cswitcherooplus" : {
+		"message" : "Switcheroo plus can redirect any web request (no matter if URL typed, images, scripts, css, etc. on page).",
+		"description" : "description what the plus version is."
+	},
+	"regularexpression" : {
+		"message" : "regular expression",
+		"description" : "text for regular expression"
+	},
+	"stringreplace" : {
+		"message" : "string replace",
+		"description" : "text for normal string replace"
+	},
+	"save" : {
+		"message" : "save",
+		"description" : "title text if user clicks on the save icon"
+	},
+	"saverule" : {
+		"message" : "save rule",
+		"description" : "title text if user clicks on the save new rule icon"
+	},
+	"edit" : {
+		"message" : "edit",
+		"description" : "title text if user clicks on an edit icon"
+	},
+	"remove" : {
+		"message" : "remove",
+		"description" : "title text if user clicks on a delete icon"
+	},
+	"from" : {
+		"message" : "from",
+		"description" : "caption text of the first rule column"
+	},
+	"to" : {
+		"message" : "to",
+		"description" : "caption text of the second rule column"
+	},
+	"removeall" : {
+		"message" : "remove all",
+		"description" : "button text for remove all rules"
+	},
+	"exportall" : {
+		"message" : "export",
+		"description" : "button text for the export button"
+	},
+	"importall" : {
+		"message" : "import",
+		"description" : "button text for the import button"
+	},
+	"enabled" : {
+		"message" : "enabled",
+		"description" : "title text for enabled rules"
+	},
+	"disabled" : {
+		"message" : "disabled",
+		"description" : "title text for disabled rules"
+	},
+	"norules" : {
+		"message" : "You have no redirect rules at the moment.",
+		"description" : "fallback text if user has no rules yet"
+	},
+	"createnew" : {
+		"message" : "Create new rule:",
+		"description" : "caption text of the new rule box"
+	},
+	"confirmclear" : {
+		"message" : "This will remove all rules. Are you sure?",
+		"description" : "confirmation of delete all button"
+	},
+	"confirmimport" : {
+		"message" : "This will overwrite all existing rules. Are you sure?",
+		"description" : "confirmation of import (deletes existing rules)"
+	},
+	"helpcaption" : {
+		"message" : "Explaination:",
+		"description" : "caption of help section"
+	},
+	"helpstring" : {
+		"message" : "The string replacement searches for the first occurance of that string and replaces it.",
+		"description" : "explain text for string replace"
+	},
+	"helpregex" : {
+		"message" : "You can enter a short definition (i.e.. 'HelloWorld') or a full qualified RegEx string with switches (i.e. '/HelloWorld/ig').",
+		"description" : "explain text for regex replace"
+	},
+	"helpswitch" : {
+		"message" : "Click on the gears icon to toggle between both modes.",
+		"description" : "click on the gears icon to toggle modes"
+	},
+	"toolscaption" : {
+		"message" : "Tools",
+		"description" : "caption for the tools section"
+	},
+	"toolsOptionsOnly" : {
+		"message" : "The tools are available on the options page ONLY.",
+		"description" : "the tools are available on the options page only (due to the very limited space)"
+	},
+	"importcaption" : {
+		"message" : "import all rules",
+		"description" : "caption text for import"
+	},
+	"importbutton" : {
+		"message" : "import rules",
+		"description" : "text for import button"
+	},
+	"exportcaption" : {
+		"message" : "export all rules",
+		"description" : "caption text for export"
+	},
+	"importexplain" : {
+		"message" : "Paste the JSON text from your last export here and press the import button. Attention: this will overwrite all your existing rules!",
+		"description" : "explaination text for export"
+	},
+	"exportexplain" : {
+		"message" : "The text here are all your rules, exported into a JSON text. Just copy & paste it into a text editor.",
+		"description" : "explaination text for export"
+	}
+
+}

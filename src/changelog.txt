@@ -1,0 +1,16 @@
+﻿Switcheroo Plus
+
+Version 1.0 -> derived from Switcheroo
+
+changes:
+- technically went back to jQuery
+- massive GUI improvements
+- ask for confirmation before deleting all rules
+- move enhanced tools to options page
+
+new features:
+- internationalized strings
+- options page
+- regex support
+- rule import and export (as JSON)
+
