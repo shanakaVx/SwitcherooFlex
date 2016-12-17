@@ -11,17 +11,17 @@ else{
 
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
 	return redirectToMatchingRule(details);
-}, {
-	urls : ["<all_urls>"]
-}, ["blocking"]);
+}, 
+{urls : ["<all_urls>"]}, ["blocking"]);
 
 function redirectToMatchingRule(details) {
+	
 	for (var i = 0; i < rules.length; i++) {
 		var rule = rules[i];
 		var sURL = details.url;
 
 		if (rule.isRegex) {
-			if (rule.isActive && details.requestId !== lastRequestId) {
+			if (rule.isActive ) {
 				lastRequestId = details.requestId;
 
 				if (rule.from.substring(0,1) == "/") {
@@ -35,8 +35,10 @@ function redirectToMatchingRule(details) {
 				}
 				
 				if (sURL.match(regx)) {
+					console.log('got a match', sURL);
 					sURL = sURL.replace(regx, rule.to);
 					details.url = sURL;
+					
 					return{
 						redirectUrl : details.url
 					};
