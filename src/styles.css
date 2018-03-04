@@ -2,7 +2,7 @@
 
 body{
 	font-family: Arial, Helvetica, sans-serif;
-	width: 650px;
+	width: 800px;
 	margin: 0;
 	padding: 0;
 	background-color: #D0E0FF;
@@ -14,7 +14,7 @@ body.options {
 }
 
 a, span {
-	padding: 5px;
+	padding: 3px;
 }
 
 ul {
@@ -133,7 +133,7 @@ input#isRegex {
 #rules li {
     display: flex;
     justify-content: space-between;
-	height: 22px;
+	height: auto;
 }
 .options #rules li {
 	height: auto;
