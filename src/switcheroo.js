@@ -232,7 +232,7 @@ function showImport() {
 
 function importRules() {
 	try {
-		var newRules = $.parseJSON($("#txtImport").val());;
+		var newRules = JSON.parse($("#txtImport").val());
 		chrome.extension.sendMessage({
 			importAllRules : true,
 			ruleset : newRules
@@ -241,7 +241,7 @@ function importRules() {
 			refreshRules();
 		});
 	} catch(e) {
-
+        console.error(e);
 	}
 }
 

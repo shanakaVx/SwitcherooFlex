@@ -1,4 +1,4 @@
-var 
+var
 	rules,
 	lastRequestId;
 
@@ -11,11 +11,11 @@ else{
 
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
 	return redirectToMatchingRule(details);
-}, 
+},
 {urls : ["<all_urls>"]}, ["blocking"]);
 
 function redirectToMatchingRule(details) {
-	
+
 	for (var i = 0; i < rules.length; i++) {
 		var rule = rules[i];
 		var sURL = details.url;
@@ -33,12 +33,12 @@ function redirectToMatchingRule(details) {
 					// shorthand regex like blah
 					var regx = new RegExp(rule.from);
 				}
-				
+
 				if (sURL.match(regx)) {
 					console.log('got a match', sURL);
 					sURL = sURL.replace(regx, rule.to);
 					details.url = sURL;
-					
+
 					return{
 						redirectUrl : details.url
 					};
