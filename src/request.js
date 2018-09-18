@@ -21,9 +21,7 @@ function redirectToMatchingRule(details) {
 		var sURL = details.url;
 
 		if (rule.isRegex) {
-			if (rule.isActive ) {
-				lastRequestId = details.requestId;
-
+			if (rule.isActive && details.requestId !== lastRequestId) {
 				if (rule.from.substring(0,1) == "/") {
 					// qualified regex string like /blah/ig
 					var expr = rule.from.substr(rule.from.indexOf("/")+1, rule.from.lastIndexOf("/")-1);
@@ -35,10 +33,9 @@ function redirectToMatchingRule(details) {
 				}
 
 				if (sURL.match(regx)) {
-					console.log('got a match', sURL);
+					lastRequestId = details.requestId; // save that we already replaced this request.
 					sURL = sURL.replace(regx, rule.to);
 					details.url = sURL;
-
 					return{
 						redirectUrl : details.url
 					};
