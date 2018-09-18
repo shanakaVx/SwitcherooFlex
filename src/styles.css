@@ -1,8 +1,8 @@
-﻿/* global styles */
+/* global styles */
 
 body{
 	font-family: Arial, Helvetica, sans-serif;
-	width: 650px;
+	width: 800px;
 	margin: 0;
 	padding: 0;
 	background-color: #D0E0FF;
@@ -14,12 +14,12 @@ body.options {
 }
 
 a, span {
-	padding: 5px;
+	padding: 3px;
 }
 
 ul {
-	list-style-type: none; 
-	padding: 0; 
+	list-style-type: none;
+	padding: 0;
 	margin: 0 0 5px 0;
 }
 
@@ -58,7 +58,7 @@ a {
 	text-shadow: #a0a0a0 3px 3px 3px;
 	color: #ffffff;
 	}
-	
+
 .options #header #credits {
 	background-color: #00a0ff;
 	color: #ffffff;
@@ -78,10 +78,10 @@ a {
 	font-size: 1rem;
 }
 
-#headings span { 
+#headings span {
 	font-weight: bold;
 	font-size: larger;
-	color: #def; 
+	color: #def;
 	padding: 5px 10px;
 }
 #headings span.to {
@@ -90,19 +90,18 @@ a {
 
 /* rule entries */
 
-.from, .to { 
+.from, .to {
 	font-family: monospace;
-	width: 250px; 
 	display: inline-block;
 	padding-left: 10px;
+    width: 45%
 }
-.options .from, 
+.options .from,
 .options .to {
-	width: 30%;
 }
 
-.seperator { 
-	font-weight: bold; 
+.seperator {
+	font-weight: bold;
 	color: red;
 	font-size: 18px;
 }
@@ -116,17 +115,34 @@ input#isRegex {
     background-color: #f0f0f0;
 }
 
+.rule-block {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.rule-block span {
+    word-wrap: break-word;
+}
+
+.rule-controls {
+    width: 10%;
+    text-align: right;
+}
+
 #rules li {
-	height: 22px;
+    display: flex;
+    justify-content: space-between;
+	height: auto;
 }
 .options #rules li {
-	height: 30px;
+	height: auto;
 	padding-top: 3px;
 }
 
 /* place holder for no rules */
 
-#no-rules { 
+#no-rules {
 	padding: 10px;
     color: #333333;
     border: 1px #808000 solid;
@@ -163,21 +179,22 @@ input#isRegex {
 	font-weight: bold;
 }
 
-#new-rule, 
-.edit-rule { 
+#new-rule,
+.edit-rule {
+    width: 100%;
 	margin-left: 3px;
 }
 
-#new-rule input[type=text], 
+#new-rule input[type=text],
 .edit-rule input[type=text] {
-	width: 250px; 
+	width: 250px;
 	margin: 0 5px;
 	font-weight: bold;
 }
 
-.options #new-rule input[type=text], 
+.options #new-rule input[type=text],
 .options .edit-rule input[type=text] {
-	width: 30%; 
+	width: 45%;
 	font-size: 1rem;
 }
 
@@ -251,7 +268,7 @@ input.isreg {
 	display: none;
 }
 
-#toolbuttons .toolbutton { 
+#toolbuttons .toolbutton {
 	margin: 0.5rem 0;
 }
 
@@ -269,8 +286,8 @@ input.isreg {
 }
 #import textarea,
 #export textarea {
-	width: 80%;
-	height: 10rem;
+	width: 70%;
+	min-height: 20rem;
 	margin: 1rem;
 	font-family: monospace;
 }
@@ -279,7 +296,7 @@ input.isreg {
 	font-weight: bold;
 	margin: 0.5rem 1rem 0;
 }
-#explainExport, 
+#explainExport,
 #explainImport {
 	margin: -0.5rem 1rem 0.5rem 1rem;
 }
