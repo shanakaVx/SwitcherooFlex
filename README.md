@@ -1,14 +1,14 @@
-Switcheroo Plus
+Switcheroo Flex
 ===============
 
 Chrome extension for redirecting
 
-This 'Plus' edition is derived from [Switcheroo](https://chrome.google.com/webstore/detail/switcheroo-redirector/cnmciclhnghalnpfhhleggldniplelbg?hl=en) Chrome extension by ranjez which applies under the GPL3 licence.
+This 'Flex' edition is derived from [Switcheroo](https://chrome.google.com/webstore/detail/switcheroo-redirector/cnmciclhnghalnpfhhleggldniplelbg?hl=en) Chrome extension by ranjez which applies under the GPL3 license.
 
-Improvements (so far) from original:
+Improvements (so far) from the original:
 
 - internationalized strings
-  Supported languages: English and German yet. If you want to translate this plugin into your own language, edit the messages.json and let me know.
+  English and German are not yet supported. If you want to translate this plugin into your own language, edit the messages.json and let me know.
   
 - massive GUI improvements
   -- Changed the ugly checkboxes into nice graphical images (thanks to OpenClipart.org for the public domain images!)
@@ -20,7 +20,7 @@ Improvements (so far) from original:
 - credits
 
 - RegEx support
-  Now, you can differ between string replaces and regular expression replaces. You can enter either just a regex string like 'foobar', you also can specify a full qualified JS regex with switches (i.e. /foobar/ig).
+  Now, you can differentiate between string replacements and regular expression replacements. You can enter either just a regex string like 'foobar', you also can specify a full qualified JS regex with switches (i.e. /foobar/ig).
   
 - rule import and export  
   You can export and import whole rulesets to JSON text.
