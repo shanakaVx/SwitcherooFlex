@@ -41,6 +41,8 @@ function addRule () {
 		isRegex: false
 	};
 
+	console.log("addRule()",newRule);
+
 	chrome.extension.sendMessage({
 		rule : newRule
 	}, function (response) {

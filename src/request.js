@@ -36,6 +36,7 @@ function redirectToMatchingRule(details) {
 					lastRequestId = details.requestId; // save that we already replaced this request.
 					sURL = sURL.replace(regx, rule.to);
 					details.url = sURL;
+
 					return{
 						redirectUrl : details.url
 					};
@@ -53,6 +54,7 @@ function redirectToMatchingRule(details) {
 }
 
 chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
+
 	if ( typeof request.rule !== 'undefined') {
 		rules.push(request.rule);
 		updateLocalStorage(rules);
